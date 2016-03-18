@@ -1,16 +1,6 @@
 package com;
 
 
-//import com.dotcms.rest.api.v1.system.conditionlet.UsersCountryConditionletFTest;
-import com.dotmarketing.portlets.rules.RulesUnderPageAssetsFTest;
-import com.dotmarketing.portlets.rules.business.RulesAPIFTest;
-//import com.dotmarketing.portlets.rules.conditionlet.ConditionletTest;
-
-import com.dotmarketing.portlets.rules.business.RulesCacheFTest;
-import com.dotmarketing.portlets.rules.conditionlet.*;
-
-import org.apache.velocity.runtime.parser.node.SimpleNodeTest;
-
 import com.dotcms.cmis.DotCMSCMISTest;
 import com.dotcms.content.elasticsearch.business.ESContentFactoryImplTest;
 import com.dotcms.content.elasticsearch.business.ESContentletIndexAPITest;
@@ -21,16 +11,13 @@ import com.dotcms.csspreproc.SassCompilerTest;
 import com.dotcms.notification.business.NotificationAPITest;
 import com.dotcms.publisher.ajax.RemotePublishAjaxActionTest;
 import com.dotcms.publisher.endpoint.business.PublishingEndPointAPITest;
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
 import com.dotcms.rest.ContentResourceTest;
 import com.dotcms.rest.RoleResourceTest;
 import com.dotcms.rest.WebResourceTest;
+import com.dotcms.rest.api.v1.sites.rules.ActionResourceFTest;
 import com.dotcms.rest.api.v1.sites.rules.ConditionGroupResourceFTest;
-//import com.dotcms.rest.api.v1.sites.rules.ConditionResourceFTest;
 import com.dotcms.rest.api.v1.sites.rules.RuleResourceFTest;
 import com.dotcms.rest.api.v1.system.ruleengine.ActionletResourceFTest;
-import com.dotcms.rest.api.v1.sites.rules.ActionResourceFTest;
 import com.dotmarketing.business.IdentifierAPITest;
 import com.dotmarketing.business.LanguageAPITest;
 import com.dotmarketing.business.PermissionAPITest;
@@ -48,9 +35,13 @@ import com.dotmarketing.portlets.folder.business.FolderAPITest;
 import com.dotmarketing.portlets.htmlpages.business.HTMLPageAPITest;
 import com.dotmarketing.portlets.linkchecker.business.LinkCheckerAPITest;
 import com.dotmarketing.portlets.links.business.MenuLinkAPITest;
+import com.dotmarketing.portlets.rules.RulesUnderPageAssetsFTest;
 import com.dotmarketing.portlets.rules.actionlet.PersonaActionletFTest;
 import com.dotmarketing.portlets.rules.actionlet.SetResponseHeaderActionletFTest;
 import com.dotmarketing.portlets.rules.actionlet.SetSessionAttributeActionletFTest;
+import com.dotmarketing.portlets.rules.business.RulesAPIFTest;
+import com.dotmarketing.portlets.rules.business.RulesCacheFTest;
+import com.dotmarketing.portlets.rules.conditionlet.*;
 import com.dotmarketing.portlets.structure.business.FieldAPITest;
 import com.dotmarketing.portlets.structure.business.URLMapTest;
 import com.dotmarketing.portlets.structure.factories.FieldFactoryTest;
@@ -58,10 +49,13 @@ import com.dotmarketing.portlets.structure.factories.StructureFactoryTest;
 import com.dotmarketing.portlets.templates.business.TemplateAPITest;
 import com.dotmarketing.portlets.workflows.business.WorkflowAPITest;
 import com.dotmarketing.portlets.workflows.model.WorkflowSearcherTest;
-import com.dotmarketing.util.ImportUtilTest;
 import com.dotmarketing.sitesearch.ajax.SiteSearchAjaxActionTest;
 import com.dotmarketing.tag.business.TagAPITest;
+import com.dotmarketing.util.ImportUtilTest;
 import com.dotmarketing.webdav.WebDavTest;
+import org.apache.velocity.runtime.parser.node.SimpleNodeTest;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
 
 /**
  * @author Jonathan Gamba.
@@ -128,7 +122,17 @@ import com.dotmarketing.webdav.WebDavTest;
     VisitedUrlConditionletFTest.class,
 	CurrentSessionLanguageConditionletFTest.class,
 	CurrentSessionLanguageConditionletTest.class,
-	TagAPITest.class,
+//    ConditionletOSGIFTest.class,
+    NumberOfTimesPreviouslyVisitedConditionletFTest.class,
+    NumberOfTimesPreviouslyVisitedConditionletTest.class,
+    PagesViewedConditionletFTest.class,
+    PagesViewedConditionletTest.class,
+    UsersSiteVisitsConditionletFTest.class,
+    UsersSiteVisitsConditionletTest.class,
+    VisitorOperatingSystemConditionletFTest.class,
+    VisitorOperatingSystemConditionletTest.class,
+    VisitorsCurrentUrlConditionletFTest.class,
+    TagAPITest.class,
 	RulesUnderPageAssetsFTest.class
 })
 public class AllTestsSuite {
